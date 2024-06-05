@@ -1,0 +1,36 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -1.6875rem;
+}
+
+.wrapper input {
+    background: var(--gray-500);
+    border: 1px solid var(--gray-700);
+    border-radius: 8px;
+    color: var(--gray-300);
+    width: 39.8rem;
+    margin-right: 0.5rem;
+    padding: 1rem;
+}
+
+.wrapper input:focus {
+    color: var(--white);
+    border: 1px solid var(--purple-dark);
+}
+
+.wrapper button {
+    background: var(--blue);
+    color: var(--white);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 0;
+}
+
+.wrapper button img {
+    padding-left: 0.5rem;
+}
