@@ -1,0 +1,53 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 46rem;
+    margin: 4rem auto 1.5rem;
+}
+
+.tasks, .completed {
+    display: flex;
+    font-weight: bold;
+}
+
+.tasks {
+    color: var(--blue);
+}
+
+.completed {
+    color: var(--purple);
+}
+
+.tasks span, .completed span {
+    background: var(--gray-400);
+    border-radius: 20px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    margin-left: 0.5rem;
+    color: var(--white);
+}
+
+.container {
+    border-top: 1px solid var(--gray-400);
+    max-width: 46rem;
+    min-height: 40vh;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.no_task {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--gray-300);
+}
+
+.no_task img {
+    width: 56px;
+    margin: 4rem 0 1rem;
+}
+
+.no_task p:nth-child(2n) {
+    font-weight: bold;
+}
