@@ -1,10 +1,12 @@
-
 import styles from "./Tasks.module.css"
 
-import clipboard from "../assets/Clipboard.svg";
 import { Task } from "./Task";
+import { NoTasks } from "./NoTasks";
 
 export function Tasks() {
+
+    const tasks = 0
+
     return (
         <>
             <div className={styles.wrapper}>
@@ -18,12 +20,7 @@ export function Tasks() {
                 </div>
             </div>
             <div className={styles.container}>
-                <Task/>
-                <div className={styles.no_task}>
-                    <img src={clipboard} alt="" />
-                    <p>Você ainda não tem tarefas cadastradas</p>
-                    <p>Crie tarefas e organize seus itens a fazer</p>
-                </div>
+                {tasks > 0 ? <NoTasks/> : <Task/>}               
             </div>
         </>
     )

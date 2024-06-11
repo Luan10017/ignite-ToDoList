@@ -1,0 +1,17 @@
+.no_task {
+    border-top: 1px solid var(--gray-400);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--gray-300);
+}
+
+.no_task img {
+    width: 56px;
+    margin: 4rem 0 1rem;
+}
+
+.no_task p:nth-child(2n) {
+    font-weight: bold;
+}
