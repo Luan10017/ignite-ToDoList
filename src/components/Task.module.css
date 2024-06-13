@@ -8,6 +8,7 @@
     display: grid;
     grid-template-columns: 2rem 1fr 24px;
     align-items: center;
+    margin-bottom: 0.75rem;
 }
 
 .container input[type="checkbox"] {

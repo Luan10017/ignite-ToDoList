@@ -1,26 +1,35 @@
+import { FormEvent, useState } from "react";
+
 import styles from "./Tasks.module.css"
 
 import { Task } from "./Task";
 import { NoTasks } from "./NoTasks";
+import { TaskType } from "../App";
 
-export function Tasks() {
+interface tasksListPros {
+    tasksList: TaskType[]
+    checkedTask: (task: TaskType) => void
+    deleteTask: (taskId: number) => void
+}
 
-    const tasks = 0
+export function Tasks({tasksList , checkedTask, deleteTask}:tasksListPros) {
+
+    const checkedCount = tasksList.filter((item) => item.checked).length;
 
     return (
         <>
             <div className={styles.wrapper}>
                 <div className={styles.tasks}>
                     <p>Tarefas criadas</p>
-                    <span>0</span>
+                    <span>{tasksList.length}</span>
                 </div>
                 <div className={styles.completed}>
                     <p>Concluidas</p>
-                    <span>0</span>
+                    <span>{tasksList.length > 0 ? `${checkedCount} de ${tasksList.length}` : 0}</span>
                 </div>
             </div>
             <div className={styles.container}>
-                {tasks > 0 ? <NoTasks/> : <Task/>}               
+                {tasksList.length > 0 ? tasksList.map(task => {return(<Task key={task.id} task={task} checkedTask={checkedTask} deleteTask={deleteTask}/>)}) : <NoTasks/> }               
             </div>
         </>
     )
