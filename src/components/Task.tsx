@@ -21,6 +21,11 @@ export function Task({task, checkedTask, deleteTask}: TaskProps) {
         deleteTask(taskId)
     }
 
+    const checkedTaskStyle = {
+        textDecoration: task.checked ? 'line-through' : 'none',
+        color: task.checked ? 'var(--gray-300)' : 'none'
+      }
+
     return (
         <div className={styles.container}>
             <input 
@@ -30,7 +35,7 @@ export function Task({task, checkedTask, deleteTask}: TaskProps) {
                 checked={task.checked}
             />
             <span></span>
-            <p>{task.content}</p>
+            <p style={checkedTaskStyle}>{task.content}</p>
             <img src={dump} onClick={() => handlerDeleteTask(task.id)} />
         </div>
     )

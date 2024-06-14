@@ -49,3 +49,7 @@
 .container p {
     margin-left: 10px;
 }
+
+.checked_task {
+    text-decoration: line-through;
+}
