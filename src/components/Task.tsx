@@ -23,7 +23,7 @@ export function Task({task, checkedTask, deleteTask}: TaskProps) {
 
     const checkedTaskStyle = {
         textDecoration: task.checked ? 'line-through' : 'none',
-        color: task.checked ? 'var(--gray-300)' : 'none'
+        color: task.checked ? 'var(--gray-300)' : 'var(--gray-100)'
       }
 
     return (
